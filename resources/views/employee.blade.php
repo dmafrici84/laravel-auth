@@ -22,10 +22,14 @@
                       </li>
                       <li>
                         Location:<br>
-                        Name: {{$employee -> location -> name}}<br>
-                        Street: {{$employee -> location -> street}}<br>
-                        City: {{$employee -> location -> city}}<br>
-                        State: {{$employee -> location -> state}}
+                        <ul>
+                          <li>
+                            Name: {{$employee -> location -> name}}<br>
+                            Street: {{$employee -> location -> street}}<br>
+                            City: {{$employee -> location -> city}}<br>
+                            State: {{$employee -> location -> state}}
+                          </li>
+                        </ul>
                       </li>
                       <li>
                         Tasks:<br>
