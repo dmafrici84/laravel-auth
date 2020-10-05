@@ -13,10 +13,10 @@
                       <a href="{{route('employees.index')}}">Employees</a>
                     </h3>
                     <h3>
-                       <a href="{{--{{route('locations.index')}}--}}">Locations</a>
+                      <a href="{{route('locations.index')}}">Locations</a>
                     </h3>
                     <h3>
-                      <a href="{{--{{route('tasks.index')}}--}}">Tasks</a>
+                      <a href="{{route('tasks.index')}}">Tasks</a>
                     </h3>
 
                   </div>

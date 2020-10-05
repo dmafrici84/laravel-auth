@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Employee;
 use App\Location;
+use App\Task;
 use Illuminate\Http\Request;
 
-class LoggedController extends Controller
+class EmployeeLoggedController extends Controller
 {
 
   public function __construct()
@@ -14,12 +15,7 @@ class LoggedController extends Controller
       $this->middleware('auth');
   }
 
-  public function destroy($id) {
-    $employee = Employee::FindOrFail($id);
-    $employee -> delete();
-    return redirect() -> route('employees.index');
-  }
-
+  // EMPLOYEES
   public function create() {
     $locations = Location::all();
     return view('employee-create',compact('locations'));
@@ -41,6 +37,12 @@ class LoggedController extends Controller
     $data = $request -> all();
     $employee = Employee::FindOrFail($id);
     $employee -> update($data);
+    return redirect() -> route('employees.index');
+  }
+
+  public function destroy($id) {
+    $employee = Employee::FindOrFail($id);
+    $employee -> delete();
     return redirect() -> route('employees.index');
   }
 }
